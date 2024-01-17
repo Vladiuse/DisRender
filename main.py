@@ -12,7 +12,7 @@ TEMPS_DIR_NAME = 'temp'
 DISS_PATH = '/home/vlad/FB/diss'
 
 DISS = {
-    'mpc': {'dir_name': 'MPC', 'templates': ['appel/index.html', 'index.html']},
+    'mpc': {'dir_name': 'MPC', 'templates': ['ticket/index.html', 'index.html']},
     'spi': {'dir_name': 'SPI', 'templates': ['checkpoint/index.html', ]},
 }
 
@@ -93,6 +93,6 @@ TEAMS = get_teams()
 dis = Dis(DISS['mpc'])
 dis.clear_teams_dir()
 for team in TEAMS:
-    if team.name == 'white':
+    if team.name in ['hnd1', 'hnd14', 'hnd15', 'hnd16']:
         dis.render_copy(team)
 
